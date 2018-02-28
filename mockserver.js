@@ -96,7 +96,7 @@ var parse = function (content, file) {
  */
 function getBodyOrQueryString(body, query) {
   if (query) {
-    return '--' + query;
+    return '--' + decodeURIComponent(query);
   }
   
   if (body && body !== '') {
